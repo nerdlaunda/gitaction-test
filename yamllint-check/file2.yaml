@@ -2,15 +2,15 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-    name: karma
-    namespace: monitoring
+  name: karma
+  namespace: monitoring
 spec:
-    jobLabel: karma
-    selector:
-        matchLabels:
-            app.kubernetes.io/instance: karma
-    namespaceSelector:
-        matchNames:
-            - monitoring
-    endpoints:
-        - path: /alerts/metrics
+  jobLabel: karma
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: karma
+  namespaceSelector:
+    matchNames:
+      - monitoring
+  endpoints:
+    - path: /alerts/metrics
