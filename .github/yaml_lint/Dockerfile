@@ -10,4 +10,6 @@ RUN ["bin/sh", "-c", "mkdir -p /src"]
 
 COPY ["src", "/src/"]
 
+RUN chmod +x /src/entrypoint.sh
+
 ENTRYPOINT ["/src/entrypoint.sh"]
