@@ -1,0 +1,13 @@
+name: "yamllint check"
+
+on: [ push ]
+
+jobs: 
+  lintcheck:
+    name:  yaml-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Run yamllint
+        uses: ./.github/yaml_lint
