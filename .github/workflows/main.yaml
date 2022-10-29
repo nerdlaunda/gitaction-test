@@ -11,3 +11,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Run yamllint
         uses: ./.github/yaml_lint
+        with:
+          yamllint_config_filepath: ./.github/yaml_lint/extra_config.yaml
+          yamllint_comment: true
